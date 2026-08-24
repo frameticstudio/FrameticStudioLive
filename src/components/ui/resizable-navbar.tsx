@@ -7,7 +7,6 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-  color,
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
@@ -106,7 +105,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={twMerge(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible || "bg-white/80 dark:bg-neutral-950/80",
+        visible?`${visible}`:"bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
     >
@@ -197,7 +196,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>

@@ -4,19 +4,16 @@ import {
   ArrowRight,
   Play,
   Target,
-  Crown,
-  Star,
+  Crown, 
   // Brand Icons
   Hexagon,
   Triangle,
   Command,
   Ghost,
-  Gem,
-  Cpu
 } from "lucide-react";
 import imgo from "../assets/images/vfx2.jpeg"
-import { color } from "motion";
-import { linearGradient } from "motion/react-client";
+// import { color } from "motion";
+// import { linearGradient } from "motion/react-client";
 // --- MOCK BRANDS ---
 // Replaced PNGs with Lucide icons to simulate tech logos
 const EDITINGSOFTWARE = [

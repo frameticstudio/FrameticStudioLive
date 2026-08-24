@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 
 import {
@@ -12,7 +11,7 @@ import ProjectPopUp from "./ProjectPopUp";
 const ProjectContent = () => {
   const {
     isVideoPlayable,
-    setIsVideoPlayable,
+    // setIsVideoPlayable,
     selectedVideo,
   } = useProject();
 
@@ -415,8 +414,8 @@ const ProjectContent = () => {
 
       {isVideoPlayable && selectedVideo && (
         <ProjectPopUp
-          video={selectedVideo}
-          onClose={() => setIsVideoPlayable(false)}
+        // video={selectedVideo}
+        // onClose={() => setIsVideoPlayable(false)}
         />
       )}
 

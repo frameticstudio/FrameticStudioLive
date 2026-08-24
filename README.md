@@ -17,59 +17,88 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  # Frameticstudio
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  Frameticstudio is a creative portfolio website for presenting selected projects, capabilities, pricing, and client-focused FAQs in one polished experience. It is built as a responsive single-page React application with a visual, motion-led interface.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  ## Highlights
 
-```
+  - Responsive portfolio landing page
+  - Hero section with studio positioning and calls to action
+  - Project showcase with interactive project details and video modals
+  - Pricing and FAQ sections for prospective clients
+  - Reusable React components and UI primitives
+  - Motion effects for a more expressive browsing experience
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  ## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - React 19
+  - TypeScript
+  - Vite
+  - Tailwind CSS 4
+  - Motion
+  - Lucide React and Tabler Icons
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  ## Getting Started
 
-```
+  ### Prerequisites
+
+  - Node.js 18 or newer
+  - npm
+
+  ### Installation
+
+  ```bash
+  npm install
+  ```
+
+  ### Start the development server
+
+  ```bash
+  npm run dev
+  ```
+
+  Vite will print the local URL in the terminal, usually `http://localhost:5173`.
+
+  ## Available Scripts
+
+  | Command | Description |
+  | --- | --- |
+  | `npm run dev` | Start the Vite development server |
+  | `npm run build` | Type-check and create a production build |
+  | `npm run lint` | Run ESLint across the project |
+  | `npm run preview` | Preview the production build locally |
+
+  ## Project Structure
+
+  ```text
+  src/
+  ├── App.tsx                     # Main page composition
+  ├── App.css                     # Application-level styles
+  ├── index.css                   # Global styles and Tailwind layers
+  ├── assets/                     # Images and video assets
+  └── components/
+      ├── HeroSection.tsx         # Studio introduction
+      ├── Projectsection.tsx       # Portfolio project listing
+      ├── Pricing.tsx              # Service packages
+      ├── FAQ.tsx                  # Common client questions
+      ├── Footer.tsx               # Closing navigation and contact area
+      └── ui/                      # Reusable interface components
+  ```
+
+  ## Customization
+
+  - Update project content in `src/components/Projectsection.tsx` and related project components.
+  - Adjust contact and social details in `src/components/contactDetails.ts`.
+  - Replace media in `src/assets/images` and `src/assets/videoes`.
+  - Update colors, typography, and global layout rules in `src/App.css` and `src/index.css`.
+
+  ## Production Build
+
+  Create an optimized build with:
+
+  ```bash
+  npm run build
+  ```
+
+  The generated files are placed in `dist/` and can be deployed to any static hosting provider that supports single-page applications.

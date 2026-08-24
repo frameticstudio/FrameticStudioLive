@@ -1,4 +1,3 @@
-import React from 'react';
 import { useProject } from './ProjectContext.tsx';
 import { VideoDetailModal } from './VideoDetailModal';
 
