@@ -98,6 +98,7 @@ export const PlaceCard = ({
       onMouseLeave={() => setIsHovered(false)}
       className={`
         group
+        showcase-card
         relative
         w-full
         overflow-hidden
@@ -143,6 +144,7 @@ export const PlaceCard = ({
 
       <div
         className="
+          showcase-thumbnail
           relative
           aspect-[9/13]
           overflow-hidden
@@ -167,6 +169,7 @@ export const PlaceCard = ({
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
+              showcase-thumbnail__media
               absolute
               inset-0
               h-full
@@ -187,6 +190,7 @@ export const PlaceCard = ({
             playsInline
             preload="metadata"
             className="
+              showcase-thumbnail__media
               absolute
               inset-0
               h-full
@@ -202,6 +206,7 @@ export const PlaceCard = ({
 
         <div
           className="
+            showcase-thumbnail__shade
             pointer-events-none
             absolute
             inset-0
@@ -213,6 +218,7 @@ export const PlaceCard = ({
 
         <div
           className={`
+            showcase-thumbnail__atmosphere
             pointer-events-none
             absolute
             inset-0
@@ -228,6 +234,7 @@ export const PlaceCard = ({
         ====================================== */}
 
         <div
+          className="showcase-thumbnail__meta"
           className="
             absolute
             left-4
@@ -477,7 +484,7 @@ export const PlaceCard = ({
           CONTENT
       ========================================== */}
 
-      <div className="relative p-5 sm:p-6">
+      <div className="showcase-card__content relative p-5 sm:p-6">
 
         {/* Platform */}
 

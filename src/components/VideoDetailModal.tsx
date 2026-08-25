@@ -1,9 +1,6 @@
 import React from "react";
 import {
   X,
-  Volume2,
-  Captions,
-  Maximize,
   Briefcase,
   Clock3,
   UserRound,
@@ -64,7 +61,7 @@ export const VideoDetailModal = ({
             />
 
             {/* Optional video controls overlay */}
-            <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-between p-4">
+            {/* <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-between p-4">
               <div className="flex gap-2">
                 <div className="rounded-md bg-black/50 p-2 text-white backdrop-blur-sm">
                   <Volume2 className="h-4 w-4" />
@@ -74,14 +71,14 @@ export const VideoDetailModal = ({
                   <Captions className="h-4 w-4" />
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <button
+            {/* <button
               type="button"
               className="absolute bottom-4 right-4 rounded-full bg-black/50 p-3 text-white backdrop-blur-md transition hover:bg-black/70"
             >
               <Maximize className="h-4 w-4" />
-            </button>
+            </button> */}
           </div>
         </div>
 

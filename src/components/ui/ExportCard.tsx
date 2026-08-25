@@ -1,6 +1,23 @@
 import { PlaceCard } from "./Card.tsx";
 import { useProject } from "../ProjectContext.tsx";
-
+// import sole from '../../assets/images/sole.png'
+import thesya from '../../assets/images/sya.png'
+import bihari from '../../assets/images/bihari.png'
+import stationary from '../../assets/images/stationary.png'
+import TECHEDITS from '../../assets/images/i1.png'
+import sab from '../../assets/images/sab.png'
+import mplton from '../../assets/images/meepelton.png'
+import jwel from '../../assets/images/jwell.png'
+import interior from '../../assets/images/interieor.png'
+import haldi from '../../assets/images/haldi.png'
+import fun from '../../assets/images/fun.png'
+import seoni from '../../assets/images/seoni.png'
+import convocation from '../../assets/images/convo.png'
+import german from '../../assets/images/german.png'
+import canada from '../../assets/images/canada.png'
+import tenmin from '../../assets/images/i2.png'
+import rss from '../../assets/images/rss.png'
+import frutt from '../../assets/images/frutt.png'
 /* =====================================================
    DATA
 ===================================================== */
@@ -8,7 +25,7 @@ import { useProject } from "../ProjectContext.tsx";
 const demoPlaceData = [
   {
     id: 1,
-    displayPic:"https://imgs.search.brave.com/t1-MGu8DSUmHnJPw5BpSdGzq5JTZnW8dHBMADsWgTbI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTE2/MjQ2NzIyL3Bob3Rv/L25ldy15b3JrLW55/LWVudHJlcHJlbmV1/ci1kZWUtb2NsZXBw/by1wb3Nlcy13aXRo/LWp1ZGl0aC1sZWli/ZXItYXQtdGhlLXBh/cHlydXMtY2FmJUMz/JUE5LWR1cmluZy1p/bWcuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPUJwUkhoX1ls/UEpueVU0aUhLMU5L/cGp1anRrNFRhcVNO/eW9FM3pBRVhOOVU9",
+    displayPic:thesya,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398988/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC_48HZ_REC_tauw7t.mp4",
     tags: ["Short Form", "Reel"],
@@ -17,6 +34,7 @@ const demoPlaceData = [
 
   {
     id: 2,
+    displayPic:bihari,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398985/TALKING_AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC_48HZ_REC_m5pv2i.mp4",
     tags: ["Short Form", "YouTube"],
@@ -25,6 +43,7 @@ const demoPlaceData = [
 
   {
     id: 3,
+    displayPic:rss,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398982/RSS_REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC_48HZ_REC_yfxlm7.mp4",
     tags: ["Cinematic", "Reel"],
@@ -33,6 +52,7 @@ const demoPlaceData = [
 
   {
     id: 4,
+    displayPic:stationary,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398983/STATIONARYREEL_ADS_PROMOTION_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC_od27hl.mp4",
     tags: ["Advertisement", "Product"],
@@ -41,6 +61,7 @@ const demoPlaceData = [
 
   {
     id: 5,
+    displayPic:TECHEDITS,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398984/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC_48HZ_REC_i4l5ep.mp4",
     tags: ["Talking Head", "Short Form"],
@@ -49,6 +70,7 @@ const demoPlaceData = [
 
   {
     id: 6,
+    displayPic:tenmin,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398983/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC_cwydhs.mp4",
     tags: ["Documentary", "Short Form"],
@@ -57,6 +79,7 @@ const demoPlaceData = [
 
   {
     id: 7,
+    displayPic:mplton,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398981/MEEPLETON_REEL_GAMEVERSE__FUNEDITS_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC_sjmjee.mp4",
     tags: ["Fun Edit", "Reel"],
@@ -65,6 +88,7 @@ const demoPlaceData = [
 
   {
     id: 8,
+    displayPic:sab,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398981/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC_48HZ_REC_fgjqni.mp4",
     tags: ["Showreel", "Cinematic"],
@@ -73,6 +97,7 @@ const demoPlaceData = [
 
   {
     id: 9,
+    displayPic:jwel,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398979/JWELLERY_ADS__MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC_48HZ_REC_egsjmh.mp4",
     tags: ["Advertisement", "Jewellery"],
@@ -81,6 +106,7 @@ const demoPlaceData = [
 
   {
     id: 10,
+    displayPic:interior,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398977/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709_phf9e8.mp4",
     tags: ["Interior Design", "Showreel"],
@@ -89,22 +115,24 @@ const demoPlaceData = [
 
   {
     id: 11,
+       displayPic:haldi, 
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398975/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC_48HZ_REC_nrszb2.mp4",
     tags: ["Cinematic", "Edit"],
     isFeatured: false,
   },
 
-  {
-    id: 12,
-    videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398974/FUNEDITS_TRENDEDITS_12SEC_1080P_30FPS_H.264_AAC_48HZ_REC_awmglj.mp4",
-    tags: ["Trend", "Fun Edit"],
-    isFeatured: false,
-  },
+  // {
+  //   id: 12,
+  //   videoUrl:
+  //     "https://res.cloudinary.com/drnie4sny/video/upload/v1787398974/FUNEDITS_TRENDEDITS_12SEC_1080P_30FPS_H.264_AAC_48HZ_REC_awmglj.mp4",
+  //   tags: ["Trend", "Fun Edit"],
+  //   isFeatured: false,
+  // },
 
   {
     id: 13,
+    displayPic:fun,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398974/FUNCTION_EDITS__FUNREEL_36SEC_1080P_30FPS_H.264_AAC_48HZ_REC_axinrg.mp4",
     tags: ["Fun Edit", "Reel"],
@@ -113,6 +141,7 @@ const demoPlaceData = [
 
   {
     id: 14,
+    displayPic:seoni,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398971/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC_nb51ov.mp4",
     tags: ["Real Estate", "Reel"],
@@ -129,6 +158,7 @@ const demoPlaceData = [
 
   {
     id: 16,
+    displayPic:german,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398969/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC_rnx8zm.mp4",
     tags: ["YouTube Short", "Short Form"],
@@ -137,6 +167,7 @@ const demoPlaceData = [
 
   {
     id: 17,
+    displayPic:convocation,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398969/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC_48HZ_REC_uoapet.mp4",
     tags: ["Cinematic", "Reel"],
@@ -145,6 +176,7 @@ const demoPlaceData = [
 
   {
     id: 18,
+    displayPic:frutt,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398970/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709_p19dpt.mp4",
     tags: ["Advertisement", "Product"],
@@ -153,6 +185,7 @@ const demoPlaceData = [
 
   {
     id: 19,
+    displayPic:canada,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398967/_ARMY_REEL__YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC_48HZ_REC_dtyjba.mp4",
     tags: ["YouTube Short", "Reel"],
@@ -338,7 +371,7 @@ const PlaceCardDemo = () => {
         >
           {/* Project number */}
 
-          <div
+          {/* <div
             className="
               absolute
               left-4
@@ -366,7 +399,7 @@ const PlaceCardDemo = () => {
             >
               {String(index + 1).padStart(3, "0")}
             </span>
-          </div>
+          </div> */}
 
           {/* Red glow */}
 

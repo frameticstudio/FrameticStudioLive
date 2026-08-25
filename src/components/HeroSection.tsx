@@ -2,25 +2,22 @@ import React from "react";
 
 import {
   ArrowRight,
-  Play,
   Target,
   Crown, 
-  // Brand Icons
-  Hexagon,
-  Triangle,
-  Command,
-  Ghost,
 } from "lucide-react";
 import imgo from "../assets/images/vfx2.jpeg"
+import AE from "../assets/images/After-Effects-Logo.webp"
+import DR from "../assets/images/davinci-resolve-logo.webp"
+import PP from "../assets/images/adobe-premiere-pro-logo.webp"
 // import { color } from "motion";
 // import { linearGradient } from "motion/react-client";
 // --- MOCK BRANDS ---
 // Replaced PNGs with Lucide icons to simulate tech logos
 const EDITINGSOFTWARE = [
-  { name: "Capcut", icon: Hexagon },
-  { name: "Adobe Premier Pro", icon: Triangle },
-  { name: "After Effect", icon: Command },
-  { name: "Davinci", icon: Ghost },
+  // { name: "Capcut", icon: Hexagon },
+  { name: "Adobe Premier Pro", icon: PP },
+  { name: "After Effect", icon: AE },
+  { name: "Davinci", icon: DR },
   // { name: "Ruby", icon: Gem },
   // { name: "Chipset", icon: Cpu },
 ];
@@ -207,18 +204,26 @@ export default function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
+
+            <a href="#projects">
+              <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4" >
               <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:scale-[1.02] hover:bg-zinc-200 active:scale-[0.98]">
-                View Portfolio
+                View Work
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
-
+            </div>
+            </a>
+            {/* <a href="#projects">
+              <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4" >
               <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20">
                 <Play className="w-4 h-4 fill-current" />
                 Watch Showreel
               </button>
             </div>
+            </a> */}
           </div>
+            </div>
 
           {/* --- RIGHT COLUMN --- */}
           <div className="lg:col-span-5 space-y-6 lg:pt-9">
@@ -305,7 +310,8 @@ export default function HeroSection() {
                       className="flex items-center gap-2 opacity-50 transition-all hover:opacity-100 hover:scale-105 cursor-default grayscale hover:grayscale-0"
                     >
                       {/* Brand Icon */}
-                      <client.icon className="h-6 w-6 text-white fill-current" />
+                      <img className="h-6 w-8 " src={client.icon} />
+                      {/* <client.icon  /> */}
                       {/* Brand Name */}
                       <span className="text-lg font-bold text-white tracking-tight">
                         {client.name}

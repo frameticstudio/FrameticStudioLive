@@ -11,6 +11,7 @@ const ProjectPopUp = () => {
   if (!isVideoPlayable || !selectedVideo) {
     return null;
   }
+  console.log("POPUP isVideoPlayable:", isVideoPlayable);
 
   return (
     <VideoDetailModal

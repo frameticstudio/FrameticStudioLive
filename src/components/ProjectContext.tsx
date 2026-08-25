@@ -29,7 +29,7 @@ interface ProjectContextType {
 
   setIsVideoPlayable: React.Dispatch<
     React.SetStateAction<boolean>
-  >;
+  > | false;
 
   selectedVideo: VideoDetails | null;
 

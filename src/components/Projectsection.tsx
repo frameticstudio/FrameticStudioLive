@@ -1,7 +1,6 @@
 import { ArrowUpRight, Sparkles } from "lucide-react";
 
 import {
-  ProjectProvider,
   useProject,
 } from "./ProjectContext.tsx";
 
@@ -455,9 +454,9 @@ const ProjectContent = () => {
 
 const Projectsection = () => {
   return (
-    <ProjectProvider>
       <ProjectContent />
-    </ProjectProvider>
+    // <ProjectProvider>
+    // </ProjectProvider>
   );
 };
 
