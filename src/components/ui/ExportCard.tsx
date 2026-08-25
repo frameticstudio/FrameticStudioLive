@@ -346,7 +346,7 @@ const PlaceCardDemo = () => {
         xl:grid-cols-4
       "
     >
-      {demoPlaceData.map((project, index) => (
+      {demoPlaceData.map((project) => (
         <div
           key={project.id}
           className="

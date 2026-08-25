@@ -234,8 +234,7 @@ export const PlaceCard = ({
         ====================================== */}
 
         <div
-          className="showcase-thumbnail__meta"
-          className="
+          className="showcase-thumbnail__meta
             absolute
             left-4
             right-4
