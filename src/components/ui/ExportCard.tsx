@@ -1,4 +1,3 @@
-import { PlaceCard } from "./Card.tsx";
 import { useProject } from "../ProjectContext.tsx";
 // import sole from '../../assets/images/sole.png'
 import thesya from '../../assets/images/sya.png'
@@ -202,6 +201,8 @@ const demoPlaceData = [
     isFeatured: false,
   },
 ];
+
+
 /* =====================================================
    URL HELPERS
 ===================================================== */
@@ -213,6 +214,7 @@ const getVideoName = (url: string) => {
     .replace(/\.[^/.]+$/, "")
     .replace(/_[a-zA-Z0-9]{6,}$/, "");
 };
+
 
 const formatTitle = (url: string) => {
   const name = getVideoName(url);
@@ -234,11 +236,13 @@ const formatTitle = (url: string) => {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 };
 
+
 const extractDuration = (url: string) => {
   const match = url.match(/(\d+(?:\.\d+)?)SEC/i);
 
   return match ? `${match[1]} sec` : undefined;
 };
+
 
 const extractResolution = (url: string) => {
   const match = url.match(/(\d{3,4})P/i);
@@ -250,11 +254,13 @@ const extractResolution = (url: string) => {
     : `${match[1]}P`;
 };
 
+
 const extractFrameRate = (url: string) => {
   const match = url.match(/(\d+)FPS/i);
 
   return match ? `${match[1]} FPS` : undefined;
 };
+
 
 const extractColorGrade = (url: string) => {
   if (/REC\.709/i.test(url)) {
@@ -267,6 +273,7 @@ const extractColorGrade = (url: string) => {
 
   return undefined;
 };
+
 
 const extractCategory = (url: string) => {
   const upper = url.toUpperCase();
@@ -292,7 +299,15 @@ const extractCategory = (url: string) => {
 
   return "Short Form";
 };
-const extractOrientation = (url: string) => {
+
+
+/* =====================================================
+   ORIENTATION
+===================================================== */
+
+const extractOrientation = (
+  url: string
+): "portrait" | "landscape" => {
   const lower = url.toLowerCase();
 
   if (
@@ -303,8 +318,595 @@ const extractOrientation = (url: string) => {
   }
 
   return "portrait";
-};/* =====================================================
-   COMPONENT
+};
+
+
+/* =====================================================
+   LANDSCAPE CARD
+===================================================== */
+
+interface LandscapeCardProps {
+  project: (typeof demoPlaceData)[number];
+  onViewDetails: () => void;
+}
+
+
+const LandscapeCard = ({
+  project,
+  onViewDetails,
+}: LandscapeCardProps) => {
+  return (
+    <div
+      className="
+        project-card
+        group
+        relative
+        overflow-hidden
+        rounded-2xl
+        border
+        border-white/10
+        bg-white/[0.035]
+        transition-all
+        duration-500
+        hover:-translate-y-1
+        hover:border-[#E50914]/40
+        hover:bg-white/[0.055]
+        hover:shadow-[0_25px_70px_rgba(0,0,0,0.55)]
+      "
+    >
+
+      {/* Red ambient glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-20
+          -top-20
+          z-0
+          h-40
+          w-40
+          rounded-full
+          bg-[#E50914]/0
+          blur-[80px]
+          transition-all
+          duration-700
+          group-hover:bg-[#E50914]/[0.12]
+        "
+      />
+
+      <div className="relative z-10">
+
+        {/* =============================================
+            LANDSCAPE DISPLAY
+        ============================================== */}
+
+        <button
+          type="button"
+          onClick={onViewDetails}
+          className="
+            relative
+            block
+            aspect-video
+            w-full
+            overflow-hidden
+            bg-black
+            text-left
+          "
+        >
+
+          {project.displayPic ? (
+            <img
+              src={project.displayPic}
+              alt={formatTitle(project.videoUrl)}
+              className="
+                h-full
+                w-full
+                object-cover
+                transition-transform
+                duration-700
+                group-hover:scale-[1.03]
+              "
+            />
+          ) : (
+            <div
+              className="
+                flex
+                h-full
+                w-full
+                items-center
+                justify-center
+                bg-[#0a0a0d]
+              "
+            >
+              <span className="text-sm text-white/20">
+                Cinematic Preview
+              </span>
+            </div>
+          )}
+
+          {/* Gradient */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-black/70
+              via-transparent
+              to-black/10
+            "
+          />
+
+          {/* Cinematic */}
+          <div
+            className="
+              absolute
+              left-4
+              top-4
+              rounded-md
+              border
+              border-white/10
+              bg-black/60
+              px-3
+              py-1.5
+              backdrop-blur-xl
+            "
+          >
+            <span
+              className="
+                technical-font
+                text-[8px]
+                font-bold
+                uppercase
+                tracking-[0.2em]
+                text-white
+              "
+            >
+              Cinematic
+            </span>
+          </div>
+
+          {/* 16:9 */}
+          <div
+            className="
+              absolute
+              right-4
+              top-4
+              rounded-md
+              border
+              border-white/10
+              bg-black/60
+              px-2.5
+              py-1.5
+              backdrop-blur-xl
+            "
+          >
+            <span
+              className="
+                technical-font
+                text-[8px]
+                font-bold
+                uppercase
+                tracking-[0.15em]
+                text-white/70
+              "
+            >
+              16:9
+            </span>
+          </div>
+
+          {/* Duration */}
+          <div
+            className="
+              absolute
+              bottom-4
+              right-4
+              rounded-md
+              border
+              border-white/10
+              bg-black/70
+              px-2.5
+              py-1.5
+              backdrop-blur-xl
+            "
+          >
+            <span
+              className="
+                technical-font
+                text-[8px]
+                font-bold
+                tracking-[0.1em]
+                text-white
+              "
+            >
+              {extractDuration(project.videoUrl) || "N/A"}
+            </span>
+          </div>
+
+        </button>
+
+
+        {/* =============================================
+            LANDSCAPE INFO
+        ============================================== */}
+
+        <div
+          className="
+            flex
+            items-center
+            justify-between
+            gap-5
+            p-5
+          "
+        >
+
+          <div className="min-w-0 flex-1">
+
+            <div className="mb-2 flex flex-wrap gap-2">
+
+              {project.tags.slice(0, 3).map((tag) => (
+                <span
+                  key={tag}
+                  className="
+                    technical-font
+                    text-[8px]
+                    font-bold
+                    uppercase
+                    tracking-[0.15em]
+                    text-[#E50914]
+                  "
+                >
+                  {tag}
+                </span>
+              ))}
+
+            </div>
+
+            <h3
+              className="
+                truncate
+                text-lg
+                font-semibold
+                tracking-tight
+                text-white
+              "
+            >
+              {formatTitle(project.videoUrl)}
+            </h3>
+
+            <p
+              className="
+                technical-font
+                mt-1
+                text-[8px]
+                uppercase
+                tracking-[0.15em]
+                text-zinc-600
+              "
+            >
+              Landscape · Cinematic Edit
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            onClick={onViewDetails}
+            className="
+              shrink-0
+              rounded-full
+              border
+              border-white/10
+              bg-white/[0.04]
+              px-4
+              py-2.5
+              text-[8px]
+              font-bold
+              uppercase
+              tracking-[0.15em]
+              text-zinc-300
+              transition-all
+              duration-300
+              hover:border-[#E50914]/50
+              hover:bg-[#E50914]
+              hover:text-white
+            "
+          >
+            View →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      {/* Bottom red line */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          z-20
+          h-[2px]
+          w-0
+          bg-[#E50914]
+          transition-all
+          duration-500
+          group-hover:w-full
+        "
+      />
+
+    </div>
+  );
+};
+
+
+/* =====================================================
+   PORTRAIT CARD
+===================================================== */
+
+interface PortraitCardProps {
+  project: (typeof demoPlaceData)[number];
+  onViewDetails: () => void;
+}
+
+
+const PortraitCard = ({
+  project,
+  onViewDetails,
+}: PortraitCardProps) => {
+  return (
+    <div
+      className="
+        project-card
+        group
+        relative
+        overflow-hidden
+        rounded-2xl
+        border
+        border-white/10
+        bg-white/[0.035]
+        transition-all
+        duration-500
+        hover:-translate-y-1.5
+        hover:border-[#E50914]/40
+        hover:bg-white/[0.055]
+        hover:shadow-[0_20px_55px_rgba(0,0,0,0.5)]
+      "
+    >
+
+      {/* =============================================
+          PORTRAIT DISPLAY
+      ============================================== */}
+
+      <button
+        type="button"
+        onClick={onViewDetails}
+        className="
+          relative
+          block
+          aspect-[9/16]
+          w-full
+          overflow-hidden
+          bg-black
+          text-left
+        "
+      >
+
+        {project.displayPic ? (
+          <img
+            src={project.displayPic}
+            alt={formatTitle(project.videoUrl)}
+            className="
+              h-full
+              w-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-[1.035]
+            "
+          />
+        ) : (
+          <div
+            className="
+              flex
+              h-full
+              w-full
+              items-center
+              justify-center
+              bg-[#0a0a0d]
+            "
+          >
+            <span className="text-xs text-white/20">
+              Portrait Preview
+            </span>
+          </div>
+        )}
+
+        {/* Bottom gradient */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-x-0
+            bottom-0
+            h-[30%]
+            bg-gradient-to-t
+            from-black/80
+            via-black/20
+            to-transparent
+          "
+        />
+
+        {/* 9:16 */}
+        <div
+          className="
+            absolute
+            left-3
+            top-3
+            rounded-md
+            border
+            border-white/10
+            bg-black/60
+            px-2
+            py-1
+            backdrop-blur-xl
+          "
+        >
+          <span
+            className="
+              technical-font
+              text-[7px]
+              font-bold
+              uppercase
+              tracking-[0.15em]
+              text-white/70
+            "
+          >
+            9:16
+          </span>
+        </div>
+
+        {/* Duration */}
+        <div
+          className="
+            absolute
+            bottom-3
+            right-3
+            rounded-md
+            border
+            border-white/10
+            bg-black/70
+            px-2
+            py-1
+            backdrop-blur-xl
+          "
+        >
+          <span
+            className="
+              technical-font
+              text-[7px]
+              font-bold
+              tracking-[0.1em]
+              text-white
+            "
+          >
+            {extractDuration(project.videoUrl) || "N/A"}
+          </span>
+        </div>
+
+      </button>
+
+
+      {/* =============================================
+          PORTRAIT INFO
+      ============================================== */}
+
+      <div className="p-3.5">
+
+        <div className="mb-2 flex items-center justify-between gap-2">
+
+          <span
+            className="
+              technical-font
+              min-w-0
+              truncate
+              text-[7px]
+              font-bold
+              uppercase
+              tracking-[0.15em]
+              text-[#E50914]
+            "
+          >
+            {project.tags?.[0] || "Short Form"}
+          </span>
+
+          <span
+            className="
+              technical-font
+              shrink-0
+              text-[7px]
+              uppercase
+              tracking-[0.12em]
+              text-zinc-600
+            "
+          >
+            Portrait
+          </span>
+
+        </div>
+
+
+        <div className="flex items-center justify-between gap-2">
+
+          <h3
+            className="
+              min-w-0
+              truncate
+              text-sm
+              font-semibold
+              tracking-tight
+              text-white
+            "
+          >
+            {formatTitle(project.videoUrl)}
+          </h3>
+
+          <button
+            type="button"
+            onClick={onViewDetails}
+            aria-label="View project"
+            className="
+              flex
+              h-7
+              w-7
+              shrink-0
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-white/10
+              bg-white/[0.03]
+              text-zinc-400
+              transition-all
+              duration-300
+              hover:border-[#E50914]/50
+              hover:bg-[#E50914]
+              hover:text-white
+            "
+          >
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      {/* Bottom red line */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          z-20
+          h-[2px]
+          w-0
+          bg-[#E50914]
+          transition-all
+          duration-500
+          group-hover:w-full
+        "
+      />
+
+    </div>
+  );
+};
+
+
+/* =====================================================
+   MAIN COMPONENT
 ===================================================== */
 
 const PlaceCardDemo = () => {
@@ -312,6 +914,11 @@ const PlaceCardDemo = () => {
     setIsVideoPlayable,
     setSelectedVideo,
   } = useProject();
+
+
+  /* =====================================================
+     OPEN PROJECT MODAL
+  ===================================================== */
 
   const handleViewDetails = (
     project: (typeof demoPlaceData)[number]
@@ -324,12 +931,12 @@ const PlaceCardDemo = () => {
       videoUrl: url,
 
       category: extractCategory(url),
-    orientation: extractOrientation(url),
+
+      orientation: extractOrientation(url),
 
       description: `Professional ${extractCategory(
         url
-      ).toLowerCase()} edit created with focused pacing,
-      visual storytelling, transitions, and engaging motion.`,
+      ).toLowerCase()} edit created with focused pacing, visual storytelling, transitions, and engaging motion.`,
 
       duration: extractDuration(url),
 
@@ -355,138 +962,264 @@ const PlaceCardDemo = () => {
     setIsVideoPlayable(true);
   };
 
-  return (
-    <div
-      className="
-        grid
-        grid-cols-1
-        gap-5
-        sm:grid-cols-2
-        lg:grid-cols-3
-        xl:grid-cols-4
-      "
-    >
-      {demoPlaceData.map((project) => (
-        <div
-          key={project.id}
-          className="
-            project-card
-            group
-            relative
-            flex
-            min-h-[500px]
-            flex-col
-            overflow-hidden
-            rounded-2xl
-            border
-            border-white/10
-            bg-white/[0.035]
-            transition-all
-            duration-500
-            hover:-translate-y-2
-            hover:border-[#E50914]/40
-            hover:bg-white/[0.055]
-            hover:shadow-[0_25px_70px_rgba(0,0,0,0.55)]
-          "
-        >
-          {/* Project number */}
 
-          {/* <div
+  /* =====================================================
+     SPLIT PROJECTS
+  ===================================================== */
+
+  const landscapeProjects = demoPlaceData.filter(
+    (project) =>
+      extractOrientation(project.videoUrl) === "landscape"
+  );
+
+  const portraitProjects = demoPlaceData.filter(
+    (project) =>
+      extractOrientation(project.videoUrl) === "portrait"
+  );
+
+
+  return (
+    <div className="w-full">
+
+
+      {/* =================================================
+          01 — CINEMATIC
+      ================================================= */}
+
+      {landscapeProjects.length > 0 && (
+        <section className="mb-20">
+
+          {/* Section Header */}
+          <div
             className="
-              absolute
-              left-4
-              top-4
-              z-30
-              rounded-full
-              border
+              mb-7
+              flex
+              items-end
+              justify-between
+              border-t
               border-white/10
-              bg-black/60
-              px-3
-              py-1.5
-              backdrop-blur-xl
+              pt-5
             "
           >
-            <span
-              className="
-                technical-font
-                text-[8px]
-                font-bold
-                uppercase
-                tracking-[0.2em]
-                text-zinc-400
-                group-hover:text-[#E50914]
-              "
-            >
-              {String(index + 1).padStart(3, "0")}
-            </span>
-          </div> */}
 
-          {/* Red glow */}
+            <div>
 
-          <div
-            className="
-              pointer-events-none
-              absolute
-              -right-20
-              -top-20
-              z-0
-              h-40
-              w-40
-              rounded-full
-              bg-[#E50914]/0
-              blur-[80px]
-              transition-all
-              duration-700
-              group-hover:bg-[#E50914]/[0.12]
-            "
-          />
+              <div className="mb-2 flex items-center gap-3">
 
-          {/* Card */}
+                <span className="h-px w-6 bg-[#E50914]" />
 
-          <div className="relative z-10 flex h-full flex-1 flex-col">
-            <PlaceCard
-              orientation={project.orientation}
-            displayPic={project.displayPic}
-              videos={[project.videoUrl]}
-              tags={project.tags}
-              title={formatTitle(project.videoUrl)}
-              duration={
-                extractDuration(project.videoUrl) ||
-                "N/A"
-              }
-              platform={
-                extractCategory(project.videoUrl)
-              }
-              description={`Professional ${extractCategory(
-                project.videoUrl
-              ).toLowerCase()} edit.`}
-              isFeatured={project.isFeatured}
-              onViewDetails={() =>
-                handleViewDetails(project)
-              }
-            />
+                <span
+                  className="
+                    technical-font
+                    text-[9px]
+                    font-bold
+                    uppercase
+                    tracking-[0.22em]
+                    text-[#E50914]
+                  "
+                >
+                  01 — Cinematic
+                </span>
+
+              </div>
+
+              <h2
+                className="
+                  heading-font
+                  text-3xl
+                  leading-none
+                  text-white
+                  sm:text-4xl
+                "
+              >
+                Cinematic Stories
+              </h2>
+
+            </div>
+
+
+            <div className="hidden text-right sm:block">
+
+              <span
+                className="
+                  technical-font
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-zinc-600
+                "
+              >
+                Landscape
+              </span>
+
+              <p
+                className="
+                  technical-font
+                  mt-1
+                  text-[7px]
+                  uppercase
+                  tracking-[0.15em]
+                  text-zinc-700
+                "
+              >
+                16:9 · Film · Story
+              </p>
+
+            </div>
+
           </div>
 
-          {/* Bottom red line */}
 
+          {/* Landscape Cards */}
           <div
             className="
-              absolute
-              bottom-0
-              left-0
-              z-20
-              h-[2px]
-              w-0
-              bg-[#E50914]
-              transition-all
-              duration-500
-              group-hover:w-full
+              grid
+              grid-cols-1
+              gap-5
+              lg:grid-cols-2
             "
-          />
-        </div>
-      ))}
+          >
+
+            {landscapeProjects.map((project) => (
+              <LandscapeCard
+                key={project.id}
+                project={project}
+                onViewDetails={() =>
+                  handleViewDetails(project)
+                }
+              />
+            ))}
+
+          </div>
+
+        </section>
+      )}
+
+
+      {/* =================================================
+          02 — REELS / PORTRAIT
+      ================================================= */}
+
+      {portraitProjects.length > 0 && (
+        <section>
+
+          {/* Section Header */}
+          <div
+            className="
+              mb-7
+              flex
+              items-end
+              justify-between
+              border-t
+              border-white/10
+              pt-5
+            "
+          >
+
+            <div>
+
+              <div className="mb-2 flex items-center gap-3">
+
+                <span className="h-px w-6 bg-[#E50914]" />
+
+                <span
+                  className="
+                    technical-font
+                    text-[9px]
+                    font-bold
+                    uppercase
+                    tracking-[0.22em]
+                    text-[#E50914]
+                  "
+                >
+                  02 — Reels & Short Form
+                </span>
+
+              </div>
+
+              <h2
+                className="
+                  heading-font
+                  text-3xl
+                  leading-none
+                  text-white
+                  sm:text-4xl
+                "
+              >
+                Vertical Stories
+              </h2>
+
+            </div>
+
+
+            <div className="hidden text-right sm:block">
+
+              <span
+                className="
+                  technical-font
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-zinc-600
+                "
+              >
+                Portrait
+              </span>
+
+              <p
+                className="
+                  technical-font
+                  mt-1
+                  text-[7px]
+                  uppercase
+                  tracking-[0.15em]
+                  text-zinc-700
+                "
+              >
+                9:16 · Reels · Shorts
+              </p>
+
+            </div>
+
+          </div>
+
+
+          {/* Portrait Cards */}
+          <div
+            className="
+              grid
+              grid-cols-2
+              gap-4
+              sm:grid-cols-3
+              lg:grid-cols-4
+              xl:grid-cols-
+            "
+          >
+
+            {portraitProjects.map((project) => (
+              <PortraitCard
+                key={project.id}
+                project={project}
+                onViewDetails={() =>
+                  handleViewDetails(project)
+                }
+              />
+            ))}
+
+          </div>
+
+        </section>
+      )}
+
     </div>
   );
 };
+
+
+/* =====================================================
+   EXPORT
+===================================================== */
 
 export default PlaceCardDemo;
