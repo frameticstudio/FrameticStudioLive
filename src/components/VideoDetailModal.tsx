@@ -15,7 +15,7 @@ import {
 interface VideoDetails {
   title: string;
   videoUrl: string;
-
+orientation?:string;
   category?: string;
   description?: string;
 
@@ -45,42 +45,26 @@ export const VideoDetailModal = ({
       <div className="relative flex h-[92vh] w-full max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-[#08080d] shadow-2xl">
 
         {/* ================= LEFT : VIDEO ================= */}
-        <div className="relative flex w-[58%] items-center justify-center bg-[#0b0712]">
+<div className="relative flex w-[58%] items-center justify-center bg-[#0b0712]">
 
-          {/* Purple ambient glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(93,45,130,0.18),transparent_65%)]" />
+  {/* Purple ambient glow */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(93,45,130,0.18),transparent_65%)]" />
 
-          <div className="relative h-[92%] max-h-[850px] aspect-[9/16] overflow-hidden rounded-xl bg-black shadow-2xl">
-
-            <video
-              src={video.videoUrl}
-              controls
-              // autoPlay
-              playsInline
-              className="h-full w-full object-cover"
-            />
-
-            {/* Optional video controls overlay */}
-            {/* <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-between p-4">
-              <div className="flex gap-2">
-                <div className="rounded-md bg-black/50 p-2 text-white backdrop-blur-sm">
-                  <Volume2 className="h-4 w-4" />
-                </div>
-
-                <div className="rounded-md bg-black/50 p-2 text-white backdrop-blur-sm">
-                  <Captions className="h-4 w-4" />
-                </div>
-              </div>
-            </div> */}
-
-            {/* <button
-              type="button"
-              className="absolute bottom-4 right-4 rounded-full bg-black/50 p-3 text-white backdrop-blur-md transition hover:bg-black/70"
-            >
-              <Maximize className="h-4 w-4" />
-            </button> */}
-          </div>
-        </div>
+  <div
+    className={
+      video.orientation==="landscape"
+        ? "relative w-[92%] max-w-[900px] aspect-video overflow-hidden rounded-xl bg-black shadow-2xl"
+        : "relative h-[92%] max-h-[850px] aspect-[9/16] overflow-hidden rounded-xl bg-black shadow-2xl"
+    }
+  >
+    <video
+      src={video.videoUrl}
+      controls
+      playsInline
+      className="h-full w-full object-contain"
+    />
+  </div>
+</div>
 
         {/* ================= RIGHT : DETAILS ================= */}
         <div className="relative w-[42%] overflow-y-auto border-l border-white/10">

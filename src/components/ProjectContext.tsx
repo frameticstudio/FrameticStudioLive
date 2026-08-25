@@ -8,7 +8,7 @@ import React, {
 export interface VideoDetails {
   title: string;
   videoUrl: string;
-
+  orientation:string;
   category?: string;
   description?: string;
 
