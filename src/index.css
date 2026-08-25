@@ -105,3 +105,14 @@ body {
     transition: none;
   }
 }
+
+video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: black;
+}
+
+video::-webkit-media-controls {
+  width: 100%;
+}
