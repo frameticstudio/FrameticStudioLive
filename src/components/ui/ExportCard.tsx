@@ -17,6 +17,7 @@ import canada from '../../assets/images/canada.png'
 import tenmin from '../../assets/images/i2.png'
 import rss from '../../assets/images/rss.png'
 import frutt from '../../assets/images/frutt.png'
+import caredit from '../../assets/images/caredit.png'
 /* =====================================================
    DATA
 ===================================================== */
@@ -154,6 +155,7 @@ const demoPlaceData = [
 
   {
     id: 15,
+    displayPic:caredit,
     videoUrl:
       "https://res.cloudinary.com/drnie4sny/video/upload/v1787398970/CAREDITS_CINEMATICEDITS_22SEC_1080P_30FPS_H.264_AAC_48HZ_REC_ldahw4.mp4",
     tags: ["Cinematic", "Edit"],
