@@ -283,9 +283,25 @@ const formatTitle = (url: string) => {
 
 
 const extractDuration = (url: string) => {
-  const match = url.match(/(\d+(?:\.\d+)?)SEC/i);
+  const minutesMatch = url.match(/(\d+(?:\.\d+)?)MIN/i);
+  const secondsMatch = url.match(/(\d+(?:\.\d+)?)SEC/i);
 
-  return match ? `${match[1]} sec` : undefined;
+  const minutes = minutesMatch?.[1];
+  const seconds = secondsMatch?.[1];
+
+  if (minutes && seconds) {
+    return `${minutes} min ${seconds} sec`;
+  }
+
+  if (minutes) {
+    return `${minutes} min`;
+  }
+
+  if (seconds) {
+    return `${seconds} sec`;
+  }
+
+  return undefined;
 };
 
 

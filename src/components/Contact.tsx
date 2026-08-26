@@ -136,7 +136,21 @@ export default function Contact() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              // Connect this form to Formspree, Resend, EmailJS, or your backend.
+              const formData = new FormData(e.currentTarget);
+              const message = [
+                "Hello FrameticStudio, I would like to discuss a project.",
+                `Name: ${formData.get("name") ?? ""}`,
+                `Email: ${formData.get("email") ?? ""}`,
+                `Service: ${formData.get("service") ?? ""}`,
+                `Budget: ${formData.get("budget") || "Not specified"}`,
+                `Project details: ${formData.get("details") ?? ""}`,
+              ].join("\n");
+
+              window.open(
+                `https://wa.me/${WHATSAPP_CONTACTS[0].phone}?text=${encodeURIComponent(message)}`,
+                "_blank",
+                "noopener,noreferrer",
+              );
             }}
             className="relative overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-black/40 p-6 shadow-[0_30px_100px_rgba(0,0,0,0.5)] backdrop-blur-xl sm:p-8 lg:p-9"
           >

@@ -167,6 +167,21 @@ export default function Contact() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const message = [
+                "Hello FrameticStudio, I would like to discuss a project.",
+                `Name: ${formData.get("name") ?? ""}`,
+                `Email: ${formData.get("email") ?? ""}`,
+                `Service: ${formData.get("service") ?? ""}`,
+                `Budget: ${formData.get("budget") || "Not specified"}`,
+                `Project details: ${formData.get("details") ?? ""}`,
+              ].join("\n");
+
+              window.open(
+                `https://wa.me/${WHATSAPP_CONTACTS[0].phone}?text=${encodeURIComponent(message)}`,
+                "_blank",
+                "noopener,noreferrer",
+              );
             }}
             className="relative overflow-hidden rounded-[1.5rem] border border-white/[0.09] bg-black/40 p-5 shadow-[0_25px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl sm:p-6 lg:p-7"
           >

@@ -267,7 +267,7 @@ export default function HeroSection() {
 
                 {/* Mini Stats Grid */}
                 <div className="flex flex-cols-3 gap-4 text-center justify-around">
-                  <StatItem value="5+" label="Years" />
+                  <StatItem value="1+" label="Years" />
                   {/* <div className="w-px h-full bg-red mx-auto" /> */}
                   <StatItem value="24/7" label="Support" />
                   {/* <div className="w-px h-full bg-white/10 mx-auto" /> */}
