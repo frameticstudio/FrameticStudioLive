@@ -15,7 +15,7 @@ import {
 interface VideoDetails {
   title: string;
   videoUrl: string;
-orientation?:string;
+  orientation?: string;
   category?: string;
   description?: string;
 
@@ -41,76 +41,228 @@ export const VideoDetailModal = ({
   onClose,
 }: VideoDetailModalProps) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-      <div className="relative flex h-[92vh] w-full max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-[#08080d] shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-3 backdrop-blur-sm sm:p-4">
 
-        {/* ================= LEFT : VIDEO ================= */}
-<div className="relative flex w-[58%] items-center justify-center bg-[#0b0712]">
+      {/* ================= MAIN MODAL ================= */}
+      <div
+        className="
+          relative
+          flex
+          h-[94vh]
+          w-full
+          max-w-6xl
+          flex-col
+          overflow-y-auto
+          rounded-2xl
+          border
+          border-white/10
+          bg-[#08080d]
+          shadow-2xl
 
-  {/* Purple ambient glow */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(93,45,130,0.18),transparent_65%)]" />
+          md:h-[92vh]
+          md:flex-row
+          md:overflow-hidden
+        "
+      >
 
-  <div
-    className={
-      video.orientation==="landscape"
-        ? "relative w-[92%] max-w-[900px] aspect-video overflow-hidden rounded-xl bg-black shadow-2xl"
-        : "relative h-[92%] max-h-[850px] aspect-[9/16] overflow-hidden rounded-xl bg-black shadow-2xl"
-    }
-  >
-    <video
-      src={video.videoUrl}
-      controls
-      playsInline
-      className="h-full w-full object-contain"
-    />
-  </div>
-</div>
+        {/* ================= CLOSE BUTTON ================= */}
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="
+            absolute
+            right-3
+            top-3
+            z-50
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-black/60
+            text-white/70
+            backdrop-blur-md
+            transition
+            hover:bg-white/10
+            hover:text-white
 
-        {/* ================= RIGHT : DETAILS ================= */}
-        <div className="relative w-[42%] overflow-y-auto border-l border-white/10">
+            sm:right-4
+            sm:top-4
+            sm:h-10
+            sm:w-10
+          "
+        >
+          <X className="h-5 w-5" />
+        </button>
 
-          {/* Close button */}
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/40 text-white/70 backdrop-blur-md transition hover:bg-white/10 hover:text-white"
+
+        {/* ================================================= */}
+        {/* LEFT : VIDEO                                      */}
+        {/* ================================================= */}
+
+        <div
+          className="
+            relative
+            flex
+            min-h-[45vh]
+            w-full
+            shrink-0
+            items-center
+            justify-center
+            bg-[#0b0712]
+
+            md:h-full
+            md:min-h-0
+            md:w-[58%]
+          "
+        >
+
+          {/* Purple ambient glow */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-[radial-gradient(circle_at_center,rgba(93,45,130,0.18),transparent_65%)]
+            "
+          />
+
+          {/* ================= VIDEO ================= */}
+          <div
+            className={
+              video.orientation === "landscape"
+                ? `
+                  relative
+                  w-[92%]
+                  max-w-[900px]
+                  aspect-video
+                  overflow-hidden
+                  rounded-xl
+                  bg-black
+                  shadow-2xl
+                `
+                : `
+                  relative
+                  h-[42vh]
+                  max-h-[850px]
+                  aspect-[9/16]
+                  overflow-hidden
+                  rounded-xl
+                  bg-black
+                  shadow-2xl
+
+                  md:h-[92%]
+                `
+            }
           >
-            <X className="h-5 w-5" />
-          </button>
+            <video
+              src={video.videoUrl}
+              controls
+              playsInline
+              className="h-full w-full object-contain"
+            />
+          </div>
+        </div>
 
-          <div className="p-9">
 
-            {/* Header */}
+        {/* ================================================= */}
+        {/* RIGHT : DETAILS                                   */}
+        {/* ================================================= */}
+
+        <div
+          className="
+            relative
+            w-full
+            border-t
+            border-white/10
+
+            md:w-[42%]
+            md:overflow-y-auto
+            md:border-l
+            md:border-t-0
+          "
+        >
+
+          {/* ================= DETAILS CONTENT ================= */}
+
+          <div className="p-5 sm:p-7 md:p-9">
+
+            {/* ================= HEADER ================= */}
+
             <div className="mb-7 border-b border-white/10 pb-7">
 
-              <div className="mb-3 flex gap-2">
-                <span className="rounded-md bg-purple-500 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-white">
+              <div className="mb-3 flex flex-wrap gap-2">
+
+                <span
+                  className="
+                    rounded-md
+                    bg-purple-500
+                    px-3
+                    py-1
+                    text-[10px]
+                    font-bold
+                    uppercase
+                    tracking-[0.15em]
+                    text-white
+                  "
+                >
                   Normal Edit
                 </span>
 
-                <span className="px-1 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-white/30">
+                <span
+                  className="
+                    px-1
+                    py-1
+                    text-[10px]
+                    font-medium
+                    uppercase
+                    tracking-[0.15em]
+                    text-white/30
+                  "
+                >
                   Video Format
                 </span>
+
               </div>
 
-              <h2 className="pr-10 text-3xl font-bold tracking-tight text-white">
+
+              <h2
+                className="
+                  pr-8
+                  text-2xl
+                  font-bold
+                  tracking-tight
+                  text-white
+
+                  sm:text-3xl
+                "
+              >
                 {video.title}
               </h2>
+
             </div>
 
-            {/* Editorial Story */}
+
+            {/* ================= EDITORIAL STORY ================= */}
+
             <DetailSection title="Editorial Story / Profile">
+
               <p className="text-sm leading-6 text-white/40">
                 {video.description ||
                   "Professional clean video edit showcasing smooth B-roll sequences and seamless storytelling cuts."}
               </p>
+
             </DetailSection>
 
-            {/* Technical Profile */}
+
+            {/* ================= TECHNICAL PROFILE ================= */}
+
             <DetailSection title="Technical Production Profile">
 
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 
                 <InfoItem
                   icon={<Briefcase />}
@@ -156,21 +308,44 @@ export const VideoDetailModal = ({
                 />
 
               </div>
+
             </DetailSection>
 
-            {/* Behind Timeline */}
+
+            {/* ================= BEHIND TIMELINE ================= */}
+
             <DetailSection title="Behind the Timeline">
 
-              {/* Challenge */}
-              <div className="mb-4 rounded-xl border border-orange-500/20 bg-orange-500/[0.03] p-4">
+              {/* ================= CHALLENGE ================= */}
+
+              <div
+                className="
+                  mb-4
+                  rounded-xl
+                  border
+                  border-orange-500/20
+                  bg-orange-500/[0.03]
+                  p-4
+                "
+              >
 
                 <div className="mb-2 flex items-center gap-2 text-orange-400">
+
                   <Wrench className="h-4 w-4" />
 
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em]">
+                  <span
+                    className="
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-[0.15em]
+                    "
+                  >
                     Creative Challenge
                   </span>
+
                 </div>
+
 
                 <p className="text-sm leading-6 text-white/70">
                   {video.creativeChallenge ||
@@ -179,16 +354,36 @@ export const VideoDetailModal = ({
 
               </div>
 
-              {/* Solution */}
-              <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/[0.03] p-4">
+
+              {/* ================= SOLUTION ================= */}
+
+              <div
+                className="
+                  rounded-xl
+                  border
+                  border-emerald-500/20
+                  bg-emerald-500/[0.03]
+                  p-4
+                "
+              >
 
                 <div className="mb-2 flex items-center gap-2 text-emerald-400">
+
                   <CheckCircle2 className="h-4 w-4" />
 
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em]">
+                  <span
+                    className="
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-[0.15em]
+                    "
+                  >
                     Professional Solution
                   </span>
+
                 </div>
+
 
                 <p className="text-sm leading-6 text-white/70">
                   {video.professionalSolution ||
@@ -199,8 +394,14 @@ export const VideoDetailModal = ({
 
             </DetailSection>
 
+
+            {/* ================= BOTTOM SPACE ================= */}
+
+            <div className="h-4 md:h-2" />
+
           </div>
         </div>
+
       </div>
     </div>
   );
@@ -208,7 +409,7 @@ export const VideoDetailModal = ({
 
 
 /* ========================================================= */
-/* REUSABLE SUB COMPONENTS                                  */
+/* DETAIL SECTION                                           */
 /* ========================================================= */
 
 interface DetailSectionProps {
@@ -222,15 +423,30 @@ const DetailSection = ({
 }: DetailSectionProps) => {
   return (
     <section className="mb-7 border-b border-white/10 pb-7 last:border-0">
-      <h3 className="mb-4 text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
+
+      <h3
+        className="
+          mb-4
+          text-[10px]
+          font-medium
+          uppercase
+          tracking-[0.2em]
+          text-white/40
+        "
+      >
         {title}
       </h3>
 
       {children}
+
     </section>
   );
 };
 
+
+/* ========================================================= */
+/* INFO ITEM                                                */
+/* ========================================================= */
 
 interface InfoItemProps {
   icon: React.ReactNode;
@@ -246,17 +462,26 @@ const InfoItem = ({
   fullWidth = false,
 }: InfoItemProps) => {
   return (
-    <div className={fullWidth ? "col-span-2" : ""}>
+    <div className={fullWidth ? "sm:col-span-2" : ""}>
 
       <div className="mb-1 flex items-center gap-2 text-white/30">
-        <span className=" [&>svg]:h-4 [&>svg]:w-4">
+
+        <span className="[&>svg]:h-4 [&>svg]:w-4">
           {icon}
         </span>
 
-        <span className="text-[9px] uppercase tracking-[0.15em]">
+        <span
+          className="
+            text-[9px]
+            uppercase
+            tracking-[0.15em]
+          "
+        >
           {label}
         </span>
+
       </div>
+
 
       <p className="pl-6 text-sm font-medium text-white/75">
         {value}
