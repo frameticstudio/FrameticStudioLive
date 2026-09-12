@@ -11,7 +11,7 @@ const plans = [
     label: "For creators",
     description:
       "For creators who need sharp, consistent short-form content.",
-    price: "₹4,999",
+    price: "₹5,999",
     suffix: "/ project",
     features: [
       "Up to 4 short-form videos",
@@ -27,7 +27,7 @@ const plans = [
     label: "Most Popular",
     description:
       "A complete editing system for brands and creators publishing consistently.",
-    price: "₹14,999",
+    price: "₹17,999",
     suffix: "/ month",
     features: [
       "12 short-form videos",

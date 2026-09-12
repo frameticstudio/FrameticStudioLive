@@ -18,6 +18,7 @@ import tenmin from '../../assets/images/i2.png'
 import rss from '../../assets/images/rss.png'
 import frutt from '../../assets/images/frutt.png'
 import caredit from '../../assets/images/caredit.png'
+import mdMedia from '../../assets/images/mdMedia.png'
 /* =====================================================
    DATA
 ===================================================== */
@@ -27,12 +28,23 @@ const demoPlaceData = [
   // =====================================================
   // 1. TALKING HEAD
   // =====================================================
+{
+    id: 1,
+    displayPic: mdMedia,
+    
+    videoUrl:
+      " https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209503/MD_MEDIA.mp4",
+    tags: ["Talking Head", "Documentary", "Short Form"],
+    orientation: "portrait",
+    isFeatured: false,
+  },
 
   {
-    id: 1,
+    id: 19,
     displayPic: tenmin,
+    
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398983/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC_cwydhs.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1787398983/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC_cwydhs.mp4",
     tags: ["Talking Head", "Documentary", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
@@ -42,7 +54,7 @@ const demoPlaceData = [
     id: 2,
     displayPic: bihari,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398985/TALKING_AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC_48HZ_REC_m5pv2i.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/TALKING_AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Talking Head", "Short Form", "YouTube"],
     orientation: "portrait",
     isFeatured: false,
@@ -52,7 +64,7 @@ const demoPlaceData = [
     id: 3,
     displayPic: TECHEDITS,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398984/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC_48HZ_REC_i4l5ep.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209505/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Talking Head", "Tech", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
@@ -67,7 +79,7 @@ const demoPlaceData = [
     id: 4,
     displayPic: thesya,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398988/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC_48HZ_REC_tauw7t.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Manufacturer", "Talking Head", "Short Form"],
     orientation: "portrait",
     isFeatured: true,
@@ -77,7 +89,7 @@ const demoPlaceData = [
     id: 5,
     displayPic: jwel,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398979/JWELLERY_ADS__MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC_48HZ_REC_egsjmh.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/JWELLERY_ADS__MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Manufacturer", "Advertisement", "Jewellery"],
     orientation: "portrait",
     isFeatured: false,
@@ -99,7 +111,7 @@ const demoPlaceData = [
     id: 14,
     displayPic: seoni,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398971/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC_nb51ov.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209509/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Real Estate", "Reel"],
     orientation: "portrait",
     isFeatured: false,
@@ -109,7 +121,7 @@ const demoPlaceData = [
     id: 10,
     displayPic: interior,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398977/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709_phf9e8.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209508/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709.mp4",
     tags: ["Real Estate", "Interior Design", "Showreel"],
     orientation: "portrait",
     isFeatured: false,
@@ -124,7 +136,7 @@ const demoPlaceData = [
     id: 6,
     displayPic: stationary,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398983/STATIONARYREEL_ADS_PROMOTION_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC_od27hl.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209570/STATIONARYREEL_ADS_PROMOTION_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Advertisement", "Product"],
     orientation: "portrait",
     isFeatured: false,
@@ -134,7 +146,7 @@ const demoPlaceData = [
     id: 18,
     displayPic: frutt,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398970/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709_p19dpt.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709.mp4",
     tags: ["Advertisement", "Product"],
     orientation: "portrait",
     isFeatured: false,
@@ -149,7 +161,7 @@ const demoPlaceData = [
     id: 7,
     displayPic: rss,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/a_270/v1787398982/RSS_REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC_48HZ_REC_yfxlm7.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/a_270/v1789209572/RSS_REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Cinematic", "Reel"],
     orientation: "landscape",
     isFeatured: false,
@@ -159,7 +171,7 @@ const demoPlaceData = [
     id: 8,
     displayPic: sab,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398981/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC_48HZ_REC_fgjqni.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Showreel", "Cinematic"],
     orientation: "landscape",
     isFeatured: false,
@@ -169,7 +181,7 @@ const demoPlaceData = [
     id: 11,
     displayPic: haldi,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/a_270/v1787398975/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC_48HZ_REC_nrszb2.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/a_270/v1789209503/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Cinematic", "Edit"],
     orientation: "landscape",
     isFeatured: false,
@@ -179,7 +191,7 @@ const demoPlaceData = [
     id: 15,
     displayPic: caredit,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398970/CAREDITS_CINEMATICEDITS_22SEC_1080P_30FPS_H.264_AAC_48HZ_REC_ldahw4.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209505/CAREDITS_CINEMATICEDITS_22SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Cinematic", "Edit"],
     orientation: "landscape",
     isFeatured: false,
@@ -189,7 +201,7 @@ const demoPlaceData = [
     id: 17,
     displayPic: convocation,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398969/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC_48HZ_REC_uoapet.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Cinematic", "Reel"],
     orientation: "landscape",
     isFeatured: false,
@@ -204,7 +216,7 @@ const demoPlaceData = [
     id: 16,
     displayPic: german,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398969/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC_rnx8zm.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209575/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["YouTube Short", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
@@ -214,7 +226,7 @@ const demoPlaceData = [
     id: 19,
     displayPic: canada,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398967/_ARMY_REEL__YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC_48HZ_REC_dtyjba.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209575/_ARMY_REEL__YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["YouTube Short", "Reel"],
     orientation: "portrait",
     isFeatured: false,
@@ -229,7 +241,7 @@ const demoPlaceData = [
     id: 9,
     displayPic: mplton,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398981/MEEPLETON_REEL_GAMEVERSE__FUNEDITS_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC_sjmjee.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209560/MEEPLETON_REEL_GAMEVERSE__FUNEDITS_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Fun Edit", "Reel", "Gaming"],
     orientation: "portrait",
     isFeatured: false,
@@ -239,11 +251,11 @@ const demoPlaceData = [
     id: 12,
     displayPic: fun,
     videoUrl:
-      "https://res.cloudinary.com/drnie4sny/video/upload/v1787398974/FUNCTION_EDITS__FUNREEL_36SEC_1080P_30FPS_H.264_AAC_48HZ_REC_axinrg.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209510/FUNCTION_EDITS__FUNREEL_36SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Fun Edit", "Reel", "Event"],
     orientation: "portrait",
     isFeatured: false,
-  },
+  }
 
 ];
 
