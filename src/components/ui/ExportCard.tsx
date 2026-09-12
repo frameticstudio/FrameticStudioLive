@@ -18,7 +18,6 @@ import tenmin from '../../assets/images/i2.png'
 import rss from '../../assets/images/rss.png'
 import frutt from '../../assets/images/frutt.png'
 import caredit from '../../assets/images/caredit.png'
-import mdMedia from '../../assets/images/mdMedia.png'
 /* =====================================================
    DATA
 ===================================================== */
@@ -28,23 +27,16 @@ const demoPlaceData = [
   // =====================================================
   // 1. TALKING HEAD
   // =====================================================
-{
-    id: 1,
-    displayPic: mdMedia,
-    
-    videoUrl:
-      " https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209503/MD_MEDIA.mp4",
-    tags: ["Talking Head", "Documentary", "Short Form"],
-    orientation: "portrait",
-    isFeatured: false,
-  },
+
+// https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209571/HOSTELEDITS_CINEMATIC_20SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4
+
 
   {
-    id: 19,
+    id: 1,
     displayPic: tenmin,
     
     videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1787398983/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC_cwydhs.mp4",
+      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209506/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
     tags: ["Talking Head", "Documentary", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
@@ -255,7 +247,17 @@ const demoPlaceData = [
     tags: ["Fun Edit", "Reel", "Event"],
     orientation: "portrait",
     isFeatured: false,
-  }
+  },
+  {
+    id: 17,
+    // displayPic: mdMedia,
+    
+    videoUrl:
+      " https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209503/MD_MEDIA.mp4",
+    tags: ["Talking Head", "Documentary", "Short Form"],
+    orientation: "portrait",
+    isFeatured: false,
+  },
 
 ];
 
