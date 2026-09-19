@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import FrameticLoader from "./components/Loader";
 import { NavbarDemo } from "./components/Navbar";
-import Pricing from "./components/Pricing";
+// import Pricing from "./components/Pricing";
 import { useProject } from "./components/ProjectContext";
 import Projectsection from "./components/Projectsection";
 import logo from './assets/images/logo.jpeg'

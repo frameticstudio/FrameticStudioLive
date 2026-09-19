@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
-import { INSTAGRAM_URL, WHATSAPP_CONTACTS } from "./contactDetails";
+import { IconBrandInstagram } from "@tabler/icons-react";
+import { INSTAGRAM_URL } from "./contactDetails";
 
 export default function Footer() {
   return (
