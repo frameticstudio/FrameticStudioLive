@@ -18,6 +18,28 @@ import tenmin from '../../assets/images/i2.png'
 import rss from '../../assets/images/rss.png'
 import frutt from '../../assets/images/frutt.png'
 import caredit from '../../assets/images/caredit.png'
+import mdimg from '../../assets/images/mdMedia.png'
+import sole from '../../assets/images/sole.png'
+const talkingHeadDocumentary41 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const talkingHeadDocumentary38 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKING AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const techEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const manufacturer = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const jewelleryAds = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/JWELLERY ADS _MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const realEstate = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const interiorDesign = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709.mp4', import.meta.url).href
+const stationaryReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/STATIONARYREEL_ADS&PROMOTION_30SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const fruitAds = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709.mp4', import.meta.url).href
+const rssReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/RSS REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const showreel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const haldiEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const carEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CAREDITS_CINEMATICEDITS_22SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const convocationReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const clipper = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const armyReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/_ARMY REEL _YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const meepleton = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/MEEPLETON REEL (GAMEVERSE)_FUNEDITS_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const functionEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/FUNCTION EDITS_ FUNREEL_36SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const mdMedia = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/MD MEDIA .mp4', import.meta.url).href
+const ugcShort = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_UGC_1MIN_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
 /* =====================================================
    DATA
 ===================================================== */
@@ -27,27 +49,30 @@ const demoPlaceData = [
   // =====================================================
   // 1. TALKING HEAD
   // =====================================================
-
-// https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209571/HOSTELEDITS_CINEMATIC_20SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4
-
-
-  {
+{
     id: 1,
-    displayPic: tenmin,
-    
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209506/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "MD Media",
+    displayPic: mdimg,
+    videoUrl: mdMedia,
     tags: ["Talking Head", "Documentary", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
   },
-
   {
     id: 2,
     displayPic: bihari,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/TALKING_AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Bihari Documentary",
+    videoUrl: talkingHeadDocumentary38,
     tags: ["Talking Head", "Short Form", "YouTube"],
+    orientation: "portrait",
+    isFeatured: false,
+  },
+  {
+    id: 5,
+    displayPic: jwel,
+    name: "Jewellery Ads",
+    videoUrl: jewelleryAds,
+    tags: ["Manufacturer", "Advertisement", "Jewellery"],
     orientation: "portrait",
     isFeatured: false,
   },
@@ -55,13 +80,12 @@ const demoPlaceData = [
   {
     id: 3,
     displayPic: TECHEDITS,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209505/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Tech Edits",
+    videoUrl: techEdits,
     tags: ["Talking Head", "Tech", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
   },
-
 
   // =====================================================
   // 2. MANUFACTURER
@@ -70,30 +94,20 @@ const demoPlaceData = [
   {
     id: 4,
     displayPic: thesya,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Sya Manufacturer",
+    videoUrl: manufacturer,
     tags: ["Manufacturer", "Talking Head", "Short Form"],
     orientation: "portrait",
     isFeatured: true,
   },
 
-  {
-    id: 5,
-    displayPic: jwel,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/JWELLERY_ADS__MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
-    tags: ["Manufacturer", "Advertisement", "Jewellery"],
-    orientation: "portrait",
-    isFeatured: false,
-  },
-
+  
 
   // =====================================================
   // 3. SAAS
   // =====================================================
   // Currently no clearly identifiable SaaS video
   // in the provided data.
-
 
   // =====================================================
   // 4. REAL ESTATE
@@ -102,8 +116,8 @@ const demoPlaceData = [
   {
     id: 14,
     displayPic: seoni,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209509/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Seoni Realty",
+    videoUrl: realEstate,
     tags: ["Real Estate", "Reel"],
     orientation: "portrait",
     isFeatured: false,
@@ -112,13 +126,12 @@ const demoPlaceData = [
   {
     id: 10,
     displayPic: interior,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209508/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709.mp4",
+    name: "Interior Design Reel",
+    videoUrl: interiorDesign,
     tags: ["Real Estate", "Interior Design", "Showreel"],
     orientation: "portrait",
     isFeatured: false,
   },
-
 
   // =====================================================
   // 5. ADVERTISEMENT / PRODUCT
@@ -127,8 +140,8 @@ const demoPlaceData = [
   {
     id: 6,
     displayPic: stationary,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209570/STATIONARYREEL_ADS_PROMOTION_30SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Stationary Promo",
+    videoUrl: stationaryReel,
     tags: ["Advertisement", "Product"],
     orientation: "portrait",
     isFeatured: false,
@@ -137,13 +150,12 @@ const demoPlaceData = [
   {
     id: 18,
     displayPic: frutt,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC_48HZ_REC.709.mp4",
+    name: "Fruit Ads",
+    videoUrl: fruitAds,
     tags: ["Advertisement", "Product"],
     orientation: "portrait",
     isFeatured: false,
   },
-
 
   // =====================================================
   // 6. CINEMATIC
@@ -152,8 +164,8 @@ const demoPlaceData = [
   {
     id: 7,
     displayPic: rss,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/a_270/v1789209572/RSS_REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "RSS Reel",
+    videoUrl: rssReel,
     tags: ["Cinematic", "Reel"],
     orientation: "landscape",
     isFeatured: false,
@@ -162,8 +174,8 @@ const demoPlaceData = [
   {
     id: 8,
     displayPic: sab,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209576/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Showreel",
+    videoUrl: showreel,
     tags: ["Showreel", "Cinematic"],
     orientation: "landscape",
     isFeatured: false,
@@ -172,8 +184,8 @@ const demoPlaceData = [
   {
     id: 11,
     displayPic: haldi,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/a_270/v1789209503/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Haldi Edit",
+    videoUrl: haldiEdits,
     tags: ["Cinematic", "Edit"],
     orientation: "landscape",
     isFeatured: false,
@@ -182,8 +194,8 @@ const demoPlaceData = [
   {
     id: 15,
     displayPic: caredit,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209505/CAREDITS_CINEMATICEDITS_22SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Car Credits",
+    videoUrl: carEdits,
     tags: ["Cinematic", "Edit"],
     orientation: "landscape",
     isFeatured: false,
@@ -192,13 +204,12 @@ const demoPlaceData = [
   {
     id: 17,
     displayPic: convocation,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209573/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Convocation Reel",
+    videoUrl: convocationReel,
     tags: ["Cinematic", "Reel"],
     orientation: "landscape",
     isFeatured: false,
   },
-
 
   // =====================================================
   // 7. YOUTUBE / SHORT FORM
@@ -207,8 +218,8 @@ const demoPlaceData = [
   {
     id: 16,
     displayPic: german,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209575/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Clipper Short",
+    videoUrl: clipper,
     tags: ["YouTube Short", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
@@ -217,13 +228,12 @@ const demoPlaceData = [
   {
     id: 19,
     displayPic: canada,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209575/_ARMY_REEL__YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Army Reel",
+    videoUrl: armyReel,
     tags: ["YouTube Short", "Reel"],
     orientation: "portrait",
     isFeatured: false,
   },
-
 
   // =====================================================
   // 8. FUN / CREATIVE
@@ -232,8 +242,8 @@ const demoPlaceData = [
   {
     id: 9,
     displayPic: mplton,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209560/MEEPLETON_REEL_GAMEVERSE__FUNEDITS_34SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Meepleton",
+    videoUrl: meepleton,
     tags: ["Fun Edit", "Reel", "Gaming"],
     orientation: "portrait",
     isFeatured: false,
@@ -242,23 +252,32 @@ const demoPlaceData = [
   {
     id: 12,
     displayPic: fun,
-    videoUrl:
-      "https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209510/FUNCTION_EDITS__FUNREEL_36SEC_1080P_30FPS_H.264_AAC_48HZ_REC.mp4",
+    name: "Function Edit",
+    videoUrl: functionEdits,
     tags: ["Fun Edit", "Reel", "Event"],
     orientation: "portrait",
     isFeatured: false,
   },
+
   {
-    id: 17,
-    // displayPic: mdMedia,
-    
-    videoUrl:
-      " https://res.cloudinary.com/tj7hlz4q/video/upload/v1789209503/MD_MEDIA.mp4",
+    id: 20,
+    displayPic: tenmin,
+    name: "Talking Head 41",
+    videoUrl: talkingHeadDocumentary41,
     tags: ["Talking Head", "Documentary", "Short Form"],
     orientation: "portrait",
     isFeatured: false,
   },
-
+  
+  {
+    id: 21,
+    displayPic: sole,
+    name: "UGC 1 Min",
+    videoUrl: ugcShort,
+    tags: ["UGC", "Short Form", "Talking Head"],
+    orientation: "portrait",
+    isFeatured: false,
+  },
 ];
 
 
@@ -294,6 +313,9 @@ const formatTitle = (url: string) => {
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
 };
+
+const getProjectName = (project: (typeof demoPlaceData)[number]) =>
+  project.name || formatTitle(project.videoUrl);
 
 
 const extractDuration = (url: string) => {
@@ -373,6 +395,14 @@ const extractCategory = (url: string) => {
   }
 
   return "Short Form";
+};
+
+const hasCinematicTag = (project: (typeof demoPlaceData)[number]) => {
+  const isTaggedCinematic = project.tags.some((tag) =>
+    /cinematic/i.test(tag)
+  );
+
+  return isTaggedCinematic || /CINEMATIC/i.test(project.videoUrl);
 };
 
 
@@ -472,15 +502,13 @@ const LandscapeCard = ({
           {project.displayPic ? (
             <img
               src={project.displayPic}
-              alt={formatTitle(project.videoUrl)}
-              className="
-                h-full
-                w-full
-                object-cover
-                transition-transform
-                duration-700
-                group-hover:scale-[1.03]
-              "
+              alt={getProjectName(project)}
+              className={[
+                "h-full w-full object-cover transition-transform duration-700",
+                hasCinematicTag(project)
+                  ? "-rotate-2 scale-[1.04] group-hover:scale-[1.1]"
+                  : "group-hover:scale-[1.03]",
+              ].join(" ")}
             />
           ) : (
             <div
@@ -512,64 +540,6 @@ const LandscapeCard = ({
             "
           />
 
-          {/* Cinematic */}
-          <div
-            className="
-              absolute
-              left-4
-              top-4
-              rounded-md
-              border
-              border-white/10
-              bg-black/60
-              px-3
-              py-1.5
-              backdrop-blur-xl
-            "
-          >
-            <span
-              className="
-                technical-font
-                text-[8px]
-                font-bold
-                uppercase
-                tracking-[0.2em]
-                text-white
-              "
-            >
-              Cinematic
-            </span>
-          </div>
-
-          
-
-          {/* Duration */}
-          <div
-            className="
-              absolute
-              bottom-4
-              right-4
-              rounded-md
-              border
-              border-white/10
-              bg-black/70
-              px-2.5
-              py-1.5
-              backdrop-blur-xl
-            "
-          >
-            <span
-              className="
-                technical-font
-                text-[8px]
-                font-bold
-                tracking-[0.1em]
-                text-white
-              "
-            >
-              {extractDuration(project.videoUrl) || "N/A"}
-            </span>
-          </div>
 
         </button>
 
@@ -604,7 +574,7 @@ const LandscapeCard = ({
                     text-[#E50914]
                   "
                 >
-                  {tag}
+                  {/* {tag} */}
                 </span>
               ))}
 
@@ -619,7 +589,7 @@ const LandscapeCard = ({
                 text-white
               "
             >
-              {formatTitle(project.videoUrl)}
+              {getProjectName(project)}
             </h3>
 
             <p
@@ -745,15 +715,13 @@ const PortraitCard = ({
         {project.displayPic ? (
           <img
             src={project.displayPic}
-            alt={formatTitle(project.videoUrl)}
-            className="
-              h-full
-              w-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-[1.035]
-            "
+            alt={getProjectName(project)}
+            className={[
+              "h-full w-full object-cover transition-transform duration-700",
+              hasCinematicTag(project)
+                ? "-rotate-2 scale-[1.04] group-hover:scale-[1.09]"
+                : "group-hover:scale-[1.035]",
+            ].join(" ")}
           />
         ) : (
           <div
@@ -787,33 +755,7 @@ const PortraitCard = ({
           "
         />
 
-        {/* Duration */}
-        <div
-          className="
-            absolute
-            bottom-3
-            right-3
-            rounded-md
-            border
-            border-white/10
-            bg-black/70
-            px-2
-            py-1
-            backdrop-blur-xl
-          "
-        >
-          <span
-            className="
-              technical-font
-              text-[7px]
-              font-bold
-              tracking-[0.1em]
-              text-white
-            "
-          >
-            {extractDuration(project.videoUrl) || "N/A"}
-          </span>
-        </div>
+        
 
       </button>
 
@@ -869,7 +811,7 @@ const PortraitCard = ({
               text-white
             "
           >
-            {formatTitle(project.videoUrl)}
+            {getProjectName(project)}
           </h3>
 
           <button
@@ -943,15 +885,17 @@ const PlaceCardDemo = () => {
     project: (typeof demoPlaceData)[number]
   ) => {
     const url = project.videoUrl;
+    const projectOrientation =
+      project.orientation ?? extractOrientation(url);
 
     setSelectedVideo({
-      title: formatTitle(url),
+      title: project.name || formatTitle(url),
 
       videoUrl: url,
 
       category: extractCategory(url),
 
-      orientation: extractOrientation(url),
+      orientation: projectOrientation,
 
       description: `Professional ${extractCategory(
         url
@@ -986,14 +930,14 @@ const PlaceCardDemo = () => {
      SPLIT PROJECTS
   ===================================================== */
 
-  const landscapeProjects = demoPlaceData.filter(
-    (project) =>
-      extractOrientation(project.videoUrl) === "landscape"
+  const cinematicProjectIds = new Set([11,7]);
+
+  const cinematicProjects = demoPlaceData.filter((project) =>
+    cinematicProjectIds.has(project.id)
   );
 
-  const portraitProjects = demoPlaceData.filter(
-    (project) =>
-      extractOrientation(project.videoUrl) === "portrait"
+  const verticalProjects = demoPlaceData.filter(
+    (project) => !cinematicProjectIds.has(project.id)
   );
 
 
@@ -1005,7 +949,7 @@ const PlaceCardDemo = () => {
           01 — CINEMATIC
       ================================================= */}
 
-      {landscapeProjects.length > 0 && (
+      {cinematicProjects.length > 0 && (
         <section className="mb-20">
 
           {/* Section Header */}
@@ -1100,7 +1044,7 @@ const PlaceCardDemo = () => {
             "
           >
 
-            {landscapeProjects.map((project) => (
+            {cinematicProjects.map((project) => (
               <LandscapeCard
                 key={project.id}
                 project={project}
@@ -1120,7 +1064,7 @@ const PlaceCardDemo = () => {
           02 — REELS / PORTRAIT
       ================================================= */}
 
-      {portraitProjects.length > 0 && (
+      {verticalProjects.length > 0 && (
         <section>
 
           {/* Section Header */}
@@ -1213,11 +1157,11 @@ const PlaceCardDemo = () => {
               gap-4
               sm:grid-cols-3
               lg:grid-cols-4
-              xl:grid-cols-
+              xl:grid-cols-4
             "
           >
 
-            {portraitProjects.map((project) => (
+            {verticalProjects.map((project) => (
               <PortraitCard
                 key={project.id}
                 project={project}

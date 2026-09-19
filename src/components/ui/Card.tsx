@@ -10,6 +10,7 @@ import {
 interface PlaceCardProps {
   displayPic?: string;
   orientation?: string;
+  name?: string;
   videos: string[];
   tags: string[];
   title: string;

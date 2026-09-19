@@ -27,7 +27,7 @@ const App = () => {
     {/* <HeroSectionwe /> */}
     <Projectsection />
     {/* <Capabilities /> */}
-    <Pricing />
+    {/* <Pricing /> */}
     <FAQ />
     {/* <Contact /> */}
     <Footer />

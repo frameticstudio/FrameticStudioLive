@@ -99,12 +99,12 @@ export default function Footer() {
             >
               <MessageSquare size={16} />
             </Social> */}
-            <Social
+            {/* <Social
               href={`https://wa.me/${WHATSAPP_CONTACTS[1].phone}`}
               label="WhatsApp"
             >
               <IconBrandWhatsapp size={16} />
-            </Social>
+            </Social> */}
             <Social
             href={INSTAGRAM_URL}
             label="Instagram"

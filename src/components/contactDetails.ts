@@ -3,6 +3,5 @@ export const INSTAGRAM_HANDLE = "@frameticstudio";
 export const INSTAGRAM_URL = "https://www.instagram.com/frameticstudio/";
 
 export const WHATSAPP_CONTACTS = [
-  { label: "WhatsApp 1", value: "+91 9301073363", phone: "919301073363" },
-  { label: "WhatsApp 2", value: "+91 8821811285", phone: "918821811285" },
+  { label: "WhatsApp", value: "+91 92443 88191", phone: "919244388191" },
 ] as const;
