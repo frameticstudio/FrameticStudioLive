@@ -18,24 +18,24 @@ import canada from '../../assets/images/canada.png'
 import tenmin from '../../assets/images/i2.png'
 import rss from '../../assets/images/rss.png'
 import frutt from '../../assets/images/frutt.png'
-const manufacturer = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const talkingHeadDocumentary38 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKING AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const manufacturer = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_MANUFRACTURER_54SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const talkingHeadDocumentary38 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKING AHEAD_DOCUMENTARY_38SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
 const rssReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/RSS REEL_CINEMATIC_1.2SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const stationaryReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/STATIONARYREEL_ADS&PROMOTION_30SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const techEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const talkingHeadDocumentary41 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const meepleton = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/MEEPLETON REEL (GAMEVERSE)_FUNEDITS_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const showreel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const jewelleryAds = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/JWELLERY ADS _MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const stationaryReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/STATIONARYREEL_ADS&PROMOTION_30SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const techEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_TECHEDITS_37SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const talkingHeadDocumentary41 = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/TALKINGAHEAD_DOCUMENTARY_41SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const meepleton = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/MEEPLETON REEL (GAMEVERSE)_FUNEDITS_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const showreel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/SHOWREEL_15SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const jewelleryAds = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/JWELLERY ADS _MANUFRACTURER_19SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
 const interiorDesign = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/INTERIORDESIGN_SHOWREEL_30SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709.mp4', import.meta.url).href
 const haldiEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/HALDIEDITS_CINEMATIC_27SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
 const functionEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/FUNCTION EDITS_ FUNREEL_36SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const realEstate = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const carEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CAREDITS_22SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const clipper = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
-const convocationReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CONVOVATIONREEL_CINEMATIC_45SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const realEstate = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/DEMO_REALSTATEREEL_13SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const carEdits = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CAREDITS_22SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const clipper = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CLIPPER_YOUTUBESHORT_34SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
+const convocationReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/CONVOVATIONREEL_45SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709.mp4', import.meta.url).href
 const fruitAds = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/Frameticxaman_demo_ads_fruut_13SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709.mp4', import.meta.url).href
-const armyReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/_ARMY REEL _YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC,48HZ_REC.709', import.meta.url).href
+const armyReel = new URL('../../assets/videoes/FRAMETICSTUDIO EDITS/_ARMY REEL _YOUTUBESHORT_33SEC_1080P_30FPS_H.264_AAC,48HZ_REC.mp4', import.meta.url).href
 /* =====================================================
    DATA
 ===================================================== */
